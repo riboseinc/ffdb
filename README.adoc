@@ -1,5 +1,25 @@
 == Ffdb
 
+ifdef::env-github[]
+image:https://img.shields.io/gem/v/ffdb.svg[
+	Gem Version, link="https://rubygems.org/gems/ffdb"]
+image:https://img.shields.io/travis/riboseinc/ffdb/master.svg[
+	Build Status, link="https://travis-ci.org/riboseinc/ffdb/branches"]
+image:https://img.shields.io/codecov/c/github/riboseinc/ffdb.svg[
+	Test Coverage, link="https://codecov.io/gh/riboseinc/ffdb"]
+// image:https://img.shields.io/codeclimate/coverage/riboseinc/ffdb.svg[
+//	Test Coverage, link="https://codeclimate.com/github/riboseinc/ffdb"]
+image:https://img.shields.io/codeclimate/maintainability/riboseinc/ffdb.svg[
+	Code Climate, link="https://codeclimate.com/github/riboseinc/ffdb"]
+endif::[]
+
+ifdef::env-gitlab[]
+image:https://img.shields.io/gem/v/ffdb.svg[
+	Gem Version, link="https://rubygems.org/gems/ffdb"]
+image:https://img.shields.io/gitlab/pipeline/riboseinc/ffdb.svg[
+	GitLab pipeline, link="https://gitlab.com/riboseinc/ffdb/pipelines"]
+endif::[]
+
 Welcome to your new gem! In this directory, you’ll find the files you need to be
 able to package up your Ruby library into a gem. Put your Ruby code in the file
 `lib/ffdb`. To experiment with that code, run `bin/console` for an interactive
