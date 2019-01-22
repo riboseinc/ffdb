@@ -1,0 +1,28 @@
+# TODO: We can also borrow from GraphQL's type definition model & syntax.
+hospitals:
+  id:
+    unique: true
+medical_procedures_and_operations:
+  id:
+    unique: true
+medical_services:
+  id:
+    unique: true
+profiles:
+  id:
+    unique: true
+districts:
+  id:
+    unique: true
+genders:
+  id:
+    unique: true
+languages:
+  id:
+    unique: true
+qualifications:
+  id:
+    unique: true
+types_of_practice:
+  id:
+    unique: true

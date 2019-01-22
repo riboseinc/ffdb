@@ -1,0 +1,53 @@
+name:
+  en: Chan Tai Man
+  zh: 陳大文
+photo: !image "base64...."
+gender: !link/genders 1
+qualifications:
+- !link/profile_qualifications 1
+- !link/profile_qualifications 2
+- !link/profile_qualifications 3
+- !link/profile_qualifications 4
+- !link/profile_qualifications 5
+- !link/profile_qualifications 6
+- !link/profile_qualifications 7
+registered_address:
+- |
+  Room 999 Exemplary Building
+  301-9 Healthy Road
+  Kowloon
+district: 
+- !link/districts 1
+type_of_practice:  !link/types_of_practice 1
+consultation_hours: 
+- mon: [[1030, 1300], [1530, 1800]]
+  tue: [[1030, 1300], [1530, 1800]]
+  wed: [[1030, 1300]]
+  thu: [[1030, 1300], [1530, 1800]]
+  fri: [[1030, 1300], [1530, 1800]]
+  sat: [[1030, 1300]]
+emergency_service_available: true
+consultation_fee: [200, 1000]
+language(s)_/_dialect(s)_spoken:
+- !link/languages 1
+- !link/languages 2
+- !link/languages 3
+medical_services_available:
+- !link/medical_services 1
+- !link/medical_services 2
+- !link/medical_services 3
+- !link/medical_services 4
+medical_procedures_and_operations:
+- !link/medical_procedures_and_operations 1
+- !link/medical_procedures_and_operations 2
+- !link/medical_procedures_and_operations 3
+- !link/medical_procedures_and_operations 4
+affiliated_hospitals:
+- !link/hospitals hos_a
+- !link/hospitals hos_b
+- !link/hospitals hos_c
+telephone:  "2777 7777"
+fax:  "3555 5555"
+pager:  "7111 1111-1111"
+mobile phone:  "6000 0000"
+email:  ctm@example.org

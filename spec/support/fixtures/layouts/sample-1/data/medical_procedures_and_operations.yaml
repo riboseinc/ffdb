@@ -1,0 +1,8 @@
+- id: 1
+  name: Haemodialysis
+- id: 2
+  name: Peritoneal Dialysis
+- id: 3
+  name: Extra-corporeal shock wave lithotripsy (ESWL)
+- id: 4
+  name: Renal biopsy

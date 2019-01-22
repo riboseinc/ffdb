@@ -1,0 +1,122 @@
+= Sample Layout 1
+
+In this directory, the following file layout is used:
+
+----
+ |- data/
+ |  |- <table_name_1>/
+ |  |  |- <1_id_1>.yaml
+ |  |  |- <1_id_2>.yaml
+ |  |  |- <1_id_3>.yaml
+ |  |  `- ....yaml
+ |  |- <table_name_2>/
+ |  |  |- <2_id_1>.yaml
+ |  |  |- <2_id_2>.yaml
+ |  |  `- ....yaml
+ |  |- <table_name_3>.yaml
+ |  |- <table_name_4>.yaml
+ |  |- <table_name_5>.yaml
+ |  `- ...
+ |- ffdb-config.yaml
+ `- schemas.yaml
+----
+
+== DB Configuration: `ffdb-config.yaml`
+
+This file is required.
+
+Its type is a Map.
+
+The map is keyed by the table names.
+The map values specify the configurations of each corresponding table.
+
+The configuration is a Map.  It specifies the following:
+
+* `layout`:: The mode each table uses:
+** `monolithic`:: one YAML file containing all records
+** `separate`:: one YAML file per record
+
+Example:
+
+[source,yaml]
+----
+# ffdb-config.yaml
+hospitals:
+  layout: separate
+medical_procedures_and_operations:
+  layout: monolithic
+----
+
+----
+# File layout
+ |- data/
+ |  |- hospitals/
+ |  |  |- <1_id_1>.yaml
+ |  |  |- <1_id_2>.yaml
+ |  |  |- <1_id_3>.yaml
+ |  |  `- ....yaml
+ |  `- medical_procedures_and_operations.yaml
+ |- ffdb-config.yaml
+ `- schemas.yaml
+----
+
+[source,yaml]
+----
+# medical_procedures_and_operations.yaml
+- id: dead
+  name: Haemodialysis
+- id: beef
+  name: Peritoneal Dialysis
+- id: cafe
+  name: Extra-corporeal shock wave lithotripsy (ESWL)
+- id: babe
+  name: Renal biopsy
+----
+
+== DB Schemas: `schemas.yaml`
+
+This file is required.
+
+Its type is a Map.
+
+The map is keyed by the table names.
+The map values specify the schema information of each corresponding table.
+
+It specifies the following:
+
+* the data types of all fields in each table
+* schema requirements of the fields, if any.  _E.g._,
+** which keys are the primary key
+** which fields have to be unique
+
+Example:
+
+TODO: TBD: Data types can also be defined using GraphQL's type definition model and/or syntax.
+
+[source,yaml]
+----
+# schemas.yaml
+hospitals:
+  meta:
+    primary: id
+  fields:
+    id:
+      unique: true
+medical_procedures_and_operations:
+  meta:
+    primary: id
+  fields:
+    id:
+      unique: true
+medical_services:
+  meta:
+    primary: id
+  fields:
+    id:
+      unique: true
+----
+
+== DB tables & records: `data/`
+
+There must exist a separate folder (configurable; default is `data/`) that
+stores all records.

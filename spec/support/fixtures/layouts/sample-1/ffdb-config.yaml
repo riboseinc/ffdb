@@ -1,0 +1,18 @@
+hospitals:
+  layout: separate
+medical_procedures_and_operations:
+  layout: monolithic
+medical_services:
+  layout: monolithic
+profiles:
+  layout: separate
+districts:
+  layout: monolithic
+genders:
+  layout: monolithic
+languages:
+  layout: monolithic
+qualifications:
+  layout: monolithic
+types_of_practice:
+  layout: monolithic
